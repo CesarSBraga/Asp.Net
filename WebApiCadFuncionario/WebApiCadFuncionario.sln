@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCadFuncionario", "WebApiCadFuncionario.csproj", "{79365A53-8B5A-475F-BD66-04A8718DB40E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79365A53-8B5A-475F-BD66-04A8718DB40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79365A53-8B5A-475F-BD66-04A8718DB40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79365A53-8B5A-475F-BD66-04A8718DB40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79365A53-8B5A-475F-BD66-04A8718DB40E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46CFA0E7-B47D-44FB-BAC2-2BD59F80C503}
+	EndGlobalSection
+EndGlobal

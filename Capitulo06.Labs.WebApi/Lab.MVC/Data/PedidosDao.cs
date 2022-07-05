@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace Lab.MVC.Data
+{
+    public class PedidosDao
+    {
+        public static void IncluirPedido(Pedido pedido)
+        {
+            using (var ctx = new DB_VENDASEntities())
+            {
+                ctx.Pedidos.Add(pedido);
+                ctx.SaveChanges();
+            }
+
+        }
+        //método para listar os pedidos
+        public static IEnumerable<Pedido> ListarPedidos(string doc)
+        {
+            using (var ctx = new DB_VENDASEntities())
+            {
+                var lista = ctx.Pedidos.ToList();
+                if (!string.IsNullOrEmpty(doc))
+                {
+                    lista = lista.Where(p => p.DocCliente
+                    .Equals(doc)).ToList();
+                }
+                return lista;
+            }
+        }
+        //método para buscar um pedido
+        public static Pedido BuscarPedido(int id)
+        {
+            using (var ctx = new DB_VENDASEntities())
+            {
+                return ctx.Pedidos.FirstOrDefault(p => p.Id == id);
+            }
+        }
+        //método para remover um pedido
+        public static void RemoverPedido(Pedido pedido)
+        {
+            using (var ctx = new DB_VENDASEntities())
+            {
+                ctx.Entry<Pedido>(pedido).State = EntityState.Deleted;
+                ctx.SaveChanges();
+            }
+        }
+
+        public static int BuscarId(string numeroPedido)
+        {
+            using (var ctx = new DB_VENDASEntities())
+            {
+                var pedido = ctx.Pedidos.FirstOrDefault(p =>
+                p.NumeroPedido.Equals(numeroPedido));
+                return pedido.Id;
+
+            }
+        }
+
+    }
+}

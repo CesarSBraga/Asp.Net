@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Gestão de clientes - Escolha uma opção</h2>
+<ul>
+    <li>@Html.ActionLink("Incluir novo produto", "Incluir", null, new { @class = "btn btn-danger" })</li>
+    <li>@Html.ActionLink("Listar Produtos", "Listar", null, new { @clas = "btn btn-warning"})</li>
+</ul>
+
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Impacta.WebPageRazor.Models.Curso>
+
+@{
+    ViewBag.Title = "Listar de Cursos";
+}
+
+<h2>ListarCursos</h2>
+
+<p>
+    @Html.ActionLink("Adicionar Novo Curso", "IncluirCurso")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.ActionLink("Alterar", "EditarCurso", new { id = item.ID }, new { @class = "btn btn-outline-warning" }) |
+            @Html.ActionLink("Detalhes", "DetalheCurso", new { id = item.ID }, new { @class = "btn btn-outline-info" }) |
+            @Html.ActionLink("Excluir", "ExcluirCurso", new { id = item.ID }, new { @class = "btn btn-outline-warning" })
+        </td>
+    </tr>
+}
+
+</table>

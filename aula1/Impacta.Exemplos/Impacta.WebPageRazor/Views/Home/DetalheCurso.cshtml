@@ -1,0 +1,42 @@
+﻿@model Impacta.WebPageRazor.Models.Curso
+
+@{
+    ViewBag.Title = "DetalheCurso";
+}
+
+<h2>Detalhes Curso</h2>
+
+<div>
+    <h4>Curso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Alterar o Curso", "EditarCurso", new { id = Model.ID }, new { @class = "btn btn-warning" } )|
+    @Html.ActionLink("Voltar para Lista", "ListarCursos", null, new { @class = "btn btn-primary btn-sm" })
+</p>

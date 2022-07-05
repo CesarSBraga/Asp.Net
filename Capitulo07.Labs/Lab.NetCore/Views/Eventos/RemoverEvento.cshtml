@@ -1,0 +1,47 @@
+﻿@model Lab.NetCore.Models.Evento
+
+@{
+    ViewData["Title"] = "RemoverEvento";
+}
+
+<h1>Remover Evento</h1>
+
+<h3>Esta seguro de excluir este registro?</h3>
+<div>
+    
+    <hr />
+    <dl class="row">
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Local)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Local)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+    </dl>
+    
+    <form asp-action="RemoverEvento">
+        <input type="hidden" asp-for="Id" />
+
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-outline-info">Voltar para o Menu</a>
+    </form>
+</div>

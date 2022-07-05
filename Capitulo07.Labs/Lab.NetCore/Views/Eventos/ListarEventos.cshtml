@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Lab.NetCore.Models.Evento>
+
+@{
+    ViewData["Title"] = "Listar Eventos";
+}
+
+<h1>Lista dos Eventos</h1>
+
+<p>
+    <a asp-action="IncluirEvento" class="btn btn-outline-success">Adicionar Novo Evento</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Local)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Local)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                @Html.ActionLink("Alterar", "AlterarEvento", new { id = item.Id }, new { @class = "btn btn-outline-success" })|
+
+                @Html.ActionLink("Remover", "RemoverEvento", new { id = item.Id }, new { @class = "btn btn-outline-success" })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

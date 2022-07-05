@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Autenticacao.Web", "Impacta.Autenticacao.Web\Impacta.Autenticacao.Web.csproj", "{366FADC0-4EFB-465D-9B72-D7360623FE82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{366FADC0-4EFB-465D-9B72-D7360623FE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366FADC0-4EFB-465D-9B72-D7360623FE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366FADC0-4EFB-465D-9B72-D7360623FE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366FADC0-4EFB-465D-9B72-D7360623FE82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {226BF32E-EE2D-478D-97C9-30C593B45591}
+	EndGlobalSection
+EndGlobal
